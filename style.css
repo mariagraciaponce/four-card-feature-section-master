@@ -1,0 +1,120 @@
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Grey--500: hsl(234, 12%, 34%);
+    --Grey--400: hsl(212, 6%, 44%); 
+    --White: hsl(0, 0%, 100%);
+    --fs: 0.938rem;
+    --fw--light:200;
+    --fw--regular:400;
+    --fw--bold:600;
+    --ff:"Poppins", sans serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+img, picture {
+    max-width: 100%;
+    display: block;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+body {
+    background-color: var(--White);
+    color: var(--Grey--400);
+    font-family: var(--ff);
+    font-size: var(--fs);
+    font-weight: var(--fw--regular);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem;
+}
+.container {
+    display: grid;
+    place-content: center;
+    gap: 2rem;
+}
+.item {
+    background-color: var(--White);
+    box-shadow: 5px 5px 5px 5px  hsl(234, 12%, 34%,0.1);
+    border-radius: .5rem;
+    min-height: 200px;
+    padding: 2rem;
+    max-width: 300px;
+}
+.item img {
+    margin-left: auto;
+}
+h4 {
+    font-weight: var(--fw--bold);
+    color: var(--Grey--500);
+    font-size: 1.1rem;
+    line-height: 0;
+}
+.item-one {
+    border-top: 4px solid var(--Cyan);
+}
+.item-two {
+    border-top: 4px solid var(--Red);
+}
+.item-three {
+    border-top: 4px solid var(--Orange);
+}
+.item-four {
+    border-top: 4px solid var(--Blue);
+}
+.text-card {
+    text-align: center;
+}
+h2 {
+    font-weight: 200;
+    line-height: 1.2;
+    font-size: 1.5rem;
+}
+span {
+    font-weight: var(--fw--bold);
+    color: var(--Grey--500);
+}
+p {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    max-width: 500px;
+    margin: auto;
+}
+
+
+@media (min-width: 650px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "supervisor team karma"
+        "supervisor calculator karma";
+    }
+    .item {
+        padding: 1.5rem;
+    }
+    .item-one {
+        grid-area: supervisor;
+        align-self: center;
+    }
+    .item-two {
+        grid-area: team;
+    }
+    .item-three {
+        grid-area: karma;
+        align-self: center;
+    }
+    .item-four {
+        grid-area: calculator;
+    }
+}
