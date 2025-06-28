@@ -29,7 +29,7 @@ p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
 }
 body {
-    background-color: var(--White);
+    background-color: hsl(0, 0%, 96%);
     color: var(--Grey--400);
     font-family: var(--ff);
     font-size: var(--fs);
@@ -50,7 +50,7 @@ body {
     border-radius: .5rem;
     min-height: 200px;
     padding: 2rem;
-    max-width: 300px;
+    max-width: 350px;
 }
 .item img {
     margin-left: auto;
@@ -60,18 +60,19 @@ h4 {
     color: var(--Grey--500);
     font-size: 1.1rem;
     line-height: 0;
+    margin-block-end: 1rem;
 }
 .item-one {
-    border-top: 4px solid var(--Cyan);
+    border-block-start: 4px solid var(--Cyan);
 }
 .item-two {
-    border-top: 4px solid var(--Red);
+    border-block-start: 4px solid var(--Red);
 }
 .item-three {
-    border-top: 4px solid var(--Orange);
+    border-block-start: 4px solid var(--Orange);
 }
 .item-four {
-    border-top: 4px solid var(--Blue);
+    border-block-start: 4px solid var(--Blue);
 }
 .text-card {
     text-align: center;
@@ -85,15 +86,15 @@ span {
     font-weight: var(--fw--bold);
     color: var(--Grey--500);
 }
-p {
+.text-card p {
     padding-top: 1rem;
     padding-bottom: 2rem;
-    max-width: 500px;
+    max-width: 60%;
     margin: auto;
 }
 
 
-@media (min-width: 650px) {
+@media (min-width: 48rem) {
     .container {
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas: 
@@ -116,5 +117,8 @@ p {
     }
     .item-four {
         grid-area: calculator;
+    }
+    h2 {
+        font-size: 2rem;
     }
 }
